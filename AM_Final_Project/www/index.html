@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anas Mohamed Final Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <script src="js/lib/jquery-2.1.4.js"></script>
+
+    <script src="js/lib/jquery.validate.js"></script>
+    <script src="js/lib/jquery.mobile-1.4.5.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/lib/jquery.mobile-1.4.5.css">
+    <link rel="stylesheet" href="css/themes/myTheme.css"/>
+    <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css"/>
+    <link rel="stylesheet" href="css/AMmyStyle.css">
+
+    <script src="js/AMdatabase.js"></script>
+    <script src="js/AMglobal.js"></script>
+    <script src="js/AMutil.js"></script>
+    <script src="js/AMDAL.js"></script>
+    <script src="js/AMfacade.js"></script>
+</head>
+<body>
+<div data-role="page" id="AMHomepage">
+    <header data-role="header" data-theme="d" data-position="fixed">
+        <h2>Home</h2>
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li><a href="#AMHomepage" data-icon="home" class="ui-btn-active ui-state-persist"
+                       data-theme="a">Home</a></li>
+                <li><a href="#AMRegister" data-icon="plus" data-theme="d">Register</a></li>
+                <li><a href="#AMGames" data-icon="grid" data-theme="d">Games</a></li>
+                <li><a href="#AMList" data-icon="user" data-theme="d">List</a></li>
+                <li><a href="#AMAbout" data-icon="info" data-theme="d">About</a></li>
+            </ul>
+        </div>
+    </header>
+    <section data-role="content">
+        <h1>AM Video Game Rental Service</h1>
+        <p>Welcome to the AM Gaming Rental Service where you can sign up and rent a game for your gaming platform of
+            choice.</p>
+        <p>We always get everything from the newest AAA titles to Indie developed games.
+            Make sure to check back once a week for our new arrivals!.</p>
+        <img src="img/ResEvil2.jpg" alt="Res2">
+        <p>This week we have the remake of Resident Evil 2</p>
+        <img src="img/MK11.png" alt="Mortal-K-11">
+        <p>Also be sure to check out Mortal Kombat 11</p>
+    </section>
+    <div data-role="footer" data-theme="d" data-iconpos="bottom" data-position="fixed">
+        <h3>2019 &copy; Anas Mohamed</h3>
+    </div>
+</div>
+<div data-role="page" id="AMRegister">
+    <header data-role="header" data-theme="d" data-position="fixed">
+        <h2>Register</h2>
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li><a href="#AMHomepage" data-icon="home" data-theme="d">Home</a></li>
+                <li><a href="#AMRegister" data-icon="plus" class="ui-btn-active ui-state-persist" data-theme="a">Register</a>
+                </li>
+                <li><a href="#AMGames" data-icon="grid" data-theme="d">Games</a></li>
+                <li><a href="#AMList" data-icon="user" data-theme="d">List</a></li>
+                <li><a href="#AMAbout" data-icon="info" data-theme="d">About</a></li>
+            </ul>
+        </div>
+    </header>
+    <section data-role="content">
+        <h1>Please fill out the information below to Register Today!</h1>
+        <form id="AMRegisterForm" name="AMRegisterForm">
+            <label for="AMFirstName"><b>First Name:</b></label>
+            <input type="text" name="AMFirstName" id="AMFirstName" value="">
+            <label for="AMLastName"><b>Last Name:</b></label>
+            <input type="text" name="AMLastName" id="AMLastName" value="">
+            <label for="AMEmail"><b>Email Address:</b></label>
+            <input type="text" name="AMEmail" id="AMEmail" value="">
+            <label for="AMPlatform"><b>Gaming Platform:</b></label>
+            <select data-role="" name="AMPlatform" id="AMPlatform" required="required">
+                <option name="AMSelect" id="AMSelect" value="">Select Platform</option>
+                <option name="AMPS4" id="AMPS4" value="PS4">PS4</option>
+                <option name="AMPC" id="AMPC" value="PC">PC</option>
+                <option name="AMXBOX" id="AMXBOX" value="XBOX">XBox One</option>
+                <option name="AMNintendo" id="AMNintendo" value="Nintendo">Nintendo Switch</option>
+            </select>
+            <label for="AMComment"><b>How did you hear about Us?:</b></label>
+            <textarea name="AMComment" id="AMComment"></textarea>
+            <button type="submit" class="ui-btn-active ui-state-persist" name="AMSave" id="AMSave" data-inline="true">
+                Save
+            </button>
+            <button type="reset" name="AMReset" id="AMReset" data-inline="true"> Reset</button>
+        </form>
+
+    </section>
+    <div data-role="footer" data-theme="d" data-iconpos="bottom" data-position="fixed">
+        <h3>2019 &copy; Anas Mohamed</h3>
+    </div>
+</div>
+<div data-role="page" id="AMGames">
+    <header data-role="header" data-theme="d" data-position="fixed">
+        <h2>Games</h2>
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li><a href="#AMHomepage" data-icon="home" data-theme="d">Home</a></li>
+                <li><a href="#AMRegister" data-icon="plus" data-theme="d">Register</a></li>
+                <li><a href="#AMGames" data-icon="grid" class="ui-btn-active ui-state-persist" data-theme="a">Games</a>
+                </li>
+                <li><a href="#AMList" data-icon="user" data-theme="d">List</a></li>
+                <li><a href="#AMAbout" data-icon="info" data-theme="d">About</a></li>
+            </ul>
+        </div>
+    </header>
+    <section data-role="content">
+        <h2>List of Games</h2>
+        <img src="img/Games.png" alt="library">
+        <table data-role="table" id="AMTable" data-mode="columntoggle">
+            <thead>
+            <tr>
+                <th>Developer</th>
+                <th>Game Title</th>
+                <th>Release Year</th>
+                <th><abbr title="MetaCritic Rating">Rating</abbr></th>
+                <th>User Score</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th>Capcom</th>
+                <td><a href="http://www.residentevil2.com/us/" data-rel="external">Resident Evil 2</a></td>
+                <td>2019</td>
+                <td>90%</td>
+                <td>8.7/10</td>
+                <br>
+            </tr>
+            </tbody>
+            <tbody>
+            <tr>
+                <th>Santa Monica</th>
+                <td><a href="http://sms.playstation.com/god-of-war/" data-rel="external">God of War</a></td>
+                <td>2018</td>
+                <td>94%</td>
+                <td>9.1/10</td>
+                <br>
+            </tr>
+            </tbody>
+            <tbody>
+            <tr>
+                <th>4A Games</th>
+                <td><a href="https://www.metrothegame.com/en-gb/" data-rel="external">Metro Exodus</a></td>
+                <td>2019</td>
+                <td>80%</td>
+                <td>6.7/10</td>
+                <br>
+            </tr>
+            </tbody>
+            <tbody>
+            <tr>
+                <th>Rockstar Games</th>
+                <td><a href="https://www.rockstargames.com/reddeadredemption2/" data-rel="external">Red Dead 2</a></td>
+                <td>2018</td>
+                <td>97%</td>
+                <td>8.0/10</td>
+                <br>
+            </tr>
+            </tbody>
+            <tbody>
+            <tr>
+                <th>Bioware</th>
+                <td><a href="https://www.ea.com/games/anthem" data-rel="external">Anthem</a></td>
+                <td>2019</td>
+                <td>55%</td>
+                <td>3.6/10</td>
+                <br>
+            </tr>
+            </tbody>
+            <tbody>
+            <tr>
+                <th>Bethesda Games</th>
+                <td><a href="https://fallout.bethesda.net/en/" data-rel="external">Fallout 76</a></td>
+                <td>2018</td>
+                <td>53%</td>
+                <td>2.5/10</td>
+                <br>
+            </tr>
+            </tbody>
+            <tbody>
+            <tr>
+                <th>Square Enix</th>
+                <td><a href="https://www.kingdomhearts.com/3/us/home/" data-rel="external">Kingdom Hearts 3</a></td>
+                <td>2019</td>
+                <td>83%</td>
+                <td>8.0/10</td>
+                <br>
+            </tr>
+            </tbody>
+            <tbody>
+            <tr>
+                <th>MileStone</th>
+                <td><a href="https://ridevideogame.com/" data-rel="external">RIDE 3</a></td>
+                <td>2018</td>
+                <td>72%</td>
+                <td>7.6/10</td>
+                <br>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <div data-role="footer" data-theme="d" data-iconpos="bottom" data-position="fixed">
+        <h3>2019 &copy; Anas Mohamed</h3>
+    </div>
+</div>
+<div data-role="page" id="AMList">
+    <header data-role="header" data-theme="d" data-position="fixed">
+        <h2>List</h2>
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li><a href="#AMHomepage" data-icon="home" data-theme="d">Home</a></li>
+                <li><a href="#AMRegister" data-icon="plus" data-theme="d">Register</a></li>
+                <li><a href="#AMGames" data-icon="grid" data-theme="d">Games</a></li>
+                <li><a href="#AMList" data-icon="user" class="ui-btn-active ui-state-persist" data-theme="d">List</a>
+                </li>
+                <li><a href="#AMAbout" data-icon="info" data-theme="d">About</a></li>
+            </ul>
+        </div>
+    </header>
+    <section data-role="content">
+        <ul data-role="listview" data-inset="true" data-icon="false" id="AMListView">
+            <li>
+                <h1>First Name: Bob</h1>
+                    <p>Reviewer email: name&#64;lastName.com</p>
+                    <p>Comments: Terrible service</p>
+                    <p>Overall Rating: 7&#37;</p>
+                </a>
+            </li>
+            <li>
+                <h1>First Name: Rob</h1>
+                    <p>Reviewer email: Name&#64;lastName.com</p>
+                    <p>Comments: Excellent service</p>
+                    <p>Overall Rating: 99&#37;</p>
+                </a>
+            </li>
+            <li>
+                <h1>First Name: Jeff</h1>
+                    <p>Reviewer email: Name&#64;lastName.com</p>
+                    <p>Comments: Excellent service</p>
+                    <p>Overall Rating: 99&#37;</p>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <section data-role="content">
+        <button type="button" id="btnClearDatabase" name="btnClearDatabase" data-icon="delete"
+                data-iconpos="left">
+            Clear Members
+        </button>
+    </section>
+    <div data-role="footer" data-theme="d" data-iconpos="bottom" data-position="fixed">
+        <h3>2019 &copy; Anas Mohamed</h3>
+    </div>
+</div>
+<div data-role="page" id="AMAbout">
+    <header data-role="header" data-theme="d" data-position="fixed">
+        <h2>About</h2>
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li><a href="#AMHomepage" data-icon="home" data-theme="d">Home</a></li>
+                <li><a href="#AMRegister" data-icon="plus" data-theme="d">Register</a></li>
+                <li><a href="#AMGames" data-icon="grid" data-theme="d">Games</a></li>
+                <li><a href="#AMList" data-icon="user" data-theme="d">Display</a></li>
+                <li><a href="#AMAbout" data-icon="info" class="ui-btn-active ui-state-persist" data-theme="a">About</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <section data-role="content">
+        <h1>About Me</h1>
+        <p>My name is Anas Mohamed and i am a Conestoga College student</p>
+        <p>I created this App as my final project for PROG 3185 Programming: Mobile Applications course </p>
+        <p>Please feel free to contact me if you have any questions or suggestions</p>
+        <p><b>Phone Number:</b></p>
+        <a href="#" data-role="button" data-icon="phone">Call: 777.777.7777</a>
+        <p><b>Email Address:</b></p>
+        <a href="mailto:Amohamed7936@conestogac.on.ca" data-role="button" data-icon="mail">Amohamed@conestogac.on.ca</a>
+        <p>This App was created on April of 2019</p>
+        <div>
+            <img src="img/ConIcon.png" alt="Conestoga Icon">
+        </div>
+    </section>
+    <div data-role="footer" data-theme="d" data-iconpos="bottom" data-position="fixed">
+        <h3>2019 &copy; Anas Mohamed</h3>
+    </div>
+</div>
+</body>
+</html>

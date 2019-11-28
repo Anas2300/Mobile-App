@@ -1,0 +1,22 @@
+body {
+    height: 100%;
+    background-color: lightgoldenrodyellow!important;
+    background-size: cover;
+}
+
+.ui-page {
+    background: transparent;
+}
+
+.ui-content{
+    background: transparent;
+}
+label.error{
+    color: #F00;
+    font-weight: bold;
+}
+input.error,
+select.error,
+textarea.error{
+    border: 1px solid red;
+}
